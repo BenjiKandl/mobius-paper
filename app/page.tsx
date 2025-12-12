@@ -60,7 +60,7 @@ function MobiusPaper() {
   // Memoize the texture so it's only created once on the client.
   const texture = useMemo(() => {
     if (typeof window === "undefined") return null;
-    return makeA4Texture("YOUR TEXT HERE\\nSecond line\\nThird line");
+    return makeA4Texture("YOUR TEXTERE\\nSecond line\\nThird  Hline");
   }, []);
 
   // Build a Möbius strip geometry using Three.js's ParametricGeometry helper.
