@@ -57,10 +57,118 @@ function makeA4Texture(text: string) {
 function MobiusPaper() {
   const meshRef = useRef<THREE.Mesh>(null!);
 
+    const content = `Online Experience:
+
+- Online digital escape room 3D Render of Serpentine North Galleries.
+- Users are able to log on and have to find ways to navigate the gallery.
+- If they work alone, they go slowly, if they talk to each other, simple (Runescape) / (Club Penguin) style, they can pool resources, talk and get through quicker.
+- Sessions are mixed into lobbies which automatically pool about 10 players at a time.
+- They have 45 minutes to escape.
+- If they log out, they have the optionality to leave clues behind for the remaining players to keep sessions rolling, this forms a community archive until.
+- Danielle would set a number of tasks, hidden quests and so on to complete.
+
+Explanation of the format
+
+-
+I have presented my project on a continuous 3D loop of A4 because the brief said it could only be a one page document. This is also only fitting, given Danielle's exploration of spaces as playful and boundless. It also presents a suspended archive of my scope and production presentation.
+-
+Danielle doesn't like passivity and I didn't think you would either. As the viewer, I wanted you to be a true participant in my walkthrough.
+
+Objective
+Extend a game from The Delusion into a persistent online environment that maintains Danielle's core concerns: participation, community-driven worldbuilding and user accountability.
+
+Concept
+Build a multiplayer digital escape room structurally modelled on a stripped 3D scan of Serpentine North. Ten players per session, forty-five minutes, navigation tasks, hidden quests, and branching obstacles authored by Danielle. Individual progress is slower; collective conversation accelerates progression. Player interaction mirrors the social survival mechanics present in their practice.
+
+Mechanics
+Real-time chat with minimal affordances (Runescape-era syntax). Lightweight inventory system for sharing clues or resources. The logout mechanic leaves behind non-editable artefacts: text fragments, symbols, directions. These accumulate into a long-form, player-generated archive. The archive is deliberately unstable, echoing Danielle's refusal of passive spectatorship and insistence on users shaping the work's trajectory.
+
+Approach to Scoping and Production
+
+1. Establish Artistic and Technical Parameters
+
+Resources: Kanban Board
+
+Objective: Immediate discovery period and session with Danielle and Serpentine Art + Tech team. Identify:
+- Why are we doing this and How do we think we are going to approach this?
+- When does this need to get done?
+- What is our budget to get this done?
+- What tools are we using to project manage and communicate?
+- How does it fit into Danielle's practice and Serpentine's overall programming?
+- Which section of The Delusion being adapted, and will this have implications or complications as it pertains to IP law other stakeholders like co-creators/collaborators.
+- What is the core mechanic, narrative or emotional arc?
+- What are the non-negotiables such as mandatory elements that must survive translation?
+- Boundaries around representation, user agency, data, and accessibility (limitations)
+- Marketing? BTS?
+
+Outcome: a non-negotiable creative skeleton and a constraints document.
+
+2. Define the Experience Model (Artistic / Conceptual)
+
+Objective: Translate the exhibition into a scalable online structure:
+- What do we have to have in terms of resources (team and financial)?
+- How can we make that digital experience sustainable and preserve it in the long term?
+-
+Who will manage upkeep, pushing updates, bugs, user enquiries?
+- Which environment does Danielle want to use?
+- Are there any non-negotiable user flow, interaction rules or fail-states that are non-negotiable conceptually?
+
+Outcome: A technical blueprint that is aligned with Danielle's conceptual and artistic vision. A plan of action to create a budget and find quotes which fulfill it. Can begin outreach and building teams to begin development. Establish a criteria whereby we can work with collaborators that align with both the Serpentine's objectives and Danielle's.
+
+3. Technical Feasibility + Stack Decision
+
+Objective: Audit platforms, hosting needs, browser performance, multiplayer load, and data-routing. Select engines and frameworks based on stability, accessibility, and artist-customisation. Define:
+- Front-end engine
+- Back-end session orchestration
+- Database architecture for persistent user-generated elements
+
+Outcome: a feasibility report with constraints, risks and the required optimisation pathways.
+
+4. Prototyping Phase
+
+Build timelines and prototype
+
+Build a minimal working slice:
+- Interviewing with coders, devs, researchers
+- Placeholder UI / UX - Accessibility, safeguarding against hate speech, blind/deaf, language translation.
+
+Work through this with Danielle to validate whether the system expresses their intended agency structures.
+
+Outcome: Greenlight against budget or redirection and amend before full development.
+
+5. Co-Development and Iteration Artistically
+
+Objective: Establish a recurring review cadence with Danielle, collaborators and internal Serpentine teams, allowing the work to evolve through structured deployment cycles:
+- Update spatial logic
+- Tune mechanics to avoid passivity
+- Integrate narrative triggers
+- Adjust difficulty and cooperation dependencies
+
+Outcome: a version-controlled build shaped through creative feedback that protects the artist's iterative process without derailing its budget or timeline.
+
+6. Testing, User Validation & Marketing
+
+Objective: Final testing and approval from Danielle and the Serpentine team and ensure marketing is aligned with final delivery.
+- Playtesting: Conduct closed tests with 8 - 12 players to stress multiplayer logic, communication tools, and pacing.
+- Capture metrics: drop-off points, collaboration rates, accessibility issues.
+
+Outcome: revisions based on real behavioural patterns, rather than internal assumptions.
+
+8. Launch, Monitoring, and Maintenance
+
+-
+Marketing? Talks?
+-
+Set up analytics, moderation protocols, bug triage and a post-launch iteration plan.
+-
+Provide Danielle with an authoring interface for future updates or seasonal expansions.
+
+Outcome: a living system that continues audience engagement after the exhibition closes.`;
+
   // Memoize the texture so it's only created once on the client.
   const texture = useMemo(() => {
     if (typeof window === "undefined") return null;
-    return makeA4Texture("YOUR TEXTERE\\nSecond line\\nThird  Hline");
+  return makeA4Texture(content);
   }, []);
 
   // Build a Möbius strip geometry using Three.js's ParametricGeometry helper.
