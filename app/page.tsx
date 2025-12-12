@@ -60,7 +60,16 @@ function MobiusPaper() {
   // Memoize the texture so it's only created once on the client.
   const texture = useMemo(() => {
     if (typeof window === "undefined") return null;
-    return makeA4Texture("YOUR TEXTERE\\nSecond line\\nThird  Hline");
+    return makeA4Texture("Online Experience:
+Online digital escape room 3D Render of Serpentine North Galleries.
+Users are able to log on and have to find ways to navigate the gallery.
+If they work alone, they go slowly, if they talk to each other, simple (Runescape) / (Club
+Penguin) style, they can pool resources, talk and get through quicker.
+Sessions are mixed into lobbies which automatically pool about 10 players at a time.
+They have 45 minutes to escape.
+If they log out, they have the optionality to leave clues behind for the remaining players
+to keep sessions rolling, this forms a community archive until.
+Danielle would set a number of tasks, hidden quests and so on to complete.\\nSecond line\\nThird  Hline");
   }, []);
 
   // Build a Möbius strip geometry using Three.js's ParametricGeometry helper.
